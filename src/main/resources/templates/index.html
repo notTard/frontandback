@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Система управления персоналом</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<div align="center"
+  <h1>Работники</h1>
+  <table border="1">
+    <thead>
+      <tr>
+        <th> Имя работника</th>
+        <th> Фамилия работника</th>
+        <th> E-mail работника</th>
+      <tr>
+    </tead>
+    <tbody>
+      <tr th:each="employee : ${listEmployees}">
+              <td th:text="${employee.firstname}"></td>
+              <td th:text="${employee.lastname}"></td>
+              <td th:text="${employee.email}"></td>
+       </tr>
+    </tbody>
+  </table>
+</body>
+</html>
